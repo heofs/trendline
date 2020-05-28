@@ -1,0 +1,31 @@
+{
+  "name": "trendline",
+  "description": "Generate a trend line using linear regression",
+  "version": "0.2.0",
+  "author": "Henning Ofstad <ofstad9@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heofs/trendline.git"
+  },
+  "keywords": [
+    "trendline",
+    "linear regression",
+    "data",
+    "prediction",
+    "graph"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.13.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5"
+  }
+}

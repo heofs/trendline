@@ -51,3 +51,8 @@ console.log(trend.yStart); // 2.2
 // This will always returns true.
 console.log(trend.calcY(0) === trend.yStart); // True
 ```
+
+## Contributing
+
+I appreciate anyone who wants to contribute to the project.
+If you find any improvements to be made to the library, feel free to raise a PR for it on GitHub.

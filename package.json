@@ -1,7 +1,7 @@
 {
   "name": "trendline",
   "description": "Generate a trend line using linear regression",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Henning Ofstad <ofstad9@gmail.com>",
   "main": "index.js",
   "scripts": {

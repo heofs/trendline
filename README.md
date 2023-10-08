@@ -5,7 +5,9 @@ A lightweight JavaScript library to generate a trend line using linear regressio
 ## Example
 
 ```js
-const createTrend = require('trendline');
+import { createTrend } from 'trendline';
+// OR
+// const { createTrend } = require('trendline');
 
 const data = [
   { y: 2, x: 1 },
@@ -56,7 +58,7 @@ console.log(trend.calcY(0) === trend.yStart); // True
 
 ```jsx
 import React from 'react';
-import createTrend from 'trendline';
+import { createTrend } from 'trendline';
 
 import { LineChart, Line, XAxis, YAxis } from 'recharts';
 

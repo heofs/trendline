@@ -1,19 +1,27 @@
-function getAvg(arr) {
+function getAverage(arr: Array<number>) {
   const total = arr.reduce((acc, c) => acc + c, 0);
   return total / arr.length;
 }
 
-function getSum(arr) {
+function getSum(arr: Array<number>) {
   return arr.reduce((acc, c) => acc + c, 0);
 }
 
-module.exports = function (data, xKey, yKey) {
+export function createTrend(
+  data: Array<{ [key: string]: number }>,
+  xKey: string,
+  yKey: string
+): {
+  slope: number;
+  yStart: number;
+  calcY: (x: number) => number;
+} {
   const xData = data.map((value) => value[xKey]);
   const yData = data.map((value) => value[yKey]);
 
   // average of X values and Y values
-  const xMean = getAvg(xData);
-  const yMean = getAvg(yData);
+  const xMean = getAverage(xData);
+  const yMean = getAverage(yData);
 
   // Subtract X or Y mean from corresponding axis value
   const xMinusxMean = xData.map((val) => val - xMean);
@@ -21,7 +29,7 @@ module.exports = function (data, xKey, yKey) {
 
   const xMinusxMeanSq = xMinusxMean.map((val) => Math.pow(val, 2));
 
-  const xy = [];
+  const xy: Array<number> = [];
   for (let x = 0; x < data.length; x++) {
     xy.push(xMinusxMean[x] * yMinusyMean[x]);
   }
@@ -38,6 +46,8 @@ module.exports = function (data, xKey, yKey) {
   return {
     slope: b1,
     yStart: b0,
-    calcY: (x) => b0 + b1 * x,
+    calcY: (x: number) => b0 + b1 * x,
   };
-};
+}
+
+export default createTrend;

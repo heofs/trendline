@@ -1,4 +1,4 @@
-const createTrend = require('../index');
+import createTrend from '../src';
 
 test('should return a correct trend line', () => {
   const data = [

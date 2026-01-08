@@ -1,4 +1,5 @@
 {
+  "ignorePatterns": ["dist", "coverage", "node_modules"],
   "parserOptions": {
     // Required for certain syntax usages
     "ecmaVersion": 2017
